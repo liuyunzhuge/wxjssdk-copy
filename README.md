@@ -8,4 +8,11 @@
 ```
 npm install wxjssdk-copy --save
 ```
+使用：
+```js
+import wx from 'wxjssdk-copy'
 
+// use wxjssdk with `wx` variable
+```
+
+目前此库同步的是官方[1.4.0的版本](https://res.wx.qq.com/open/js/jweixin-1.4.0.js)。

@@ -1,0 +1,19 @@
+{
+  "name": "wxjssdk-copy",
+  "version": "1.3.0",
+  "description": "A copy of wxjssdk which can be directly used in module building environments like webpack etc.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyunzhuge/wxjssdk-copy"
+  },
+  "keywords": [
+    "wxjssdk-copy"
+  ],
+  "author": "liuyunzhuge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuyunzhuge/wxjssdk-copy/issues"
+  },
+  "homepage": "https://github.com/liuyunzhuge/wxjssdk-copy#readme"
+}
