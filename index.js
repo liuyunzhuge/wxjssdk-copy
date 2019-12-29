@@ -1,7 +1,9 @@
 !function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-        typeof define === 'function' && define.amd ? define(factory) :
-            (global = global || self, global.wx = global.jWeixin = factory())
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(global) :
+        typeof define === 'function' && define.amd ? define(function(){
+            return factory(global);
+        }) :
+            (global = global || self, factory(global, !0))
 } (this,
 function(e, n) {
     function i(n, i, t) {
