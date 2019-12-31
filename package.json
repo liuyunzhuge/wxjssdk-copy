@@ -1,6 +1,6 @@
 {
   "name": "wxjssdk-copy",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A copy of wxjssdk which can be directly used in module building environments like webpack etc.",
   "main": "index.js",
   "repository": {
