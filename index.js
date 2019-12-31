@@ -243,6 +243,9 @@ function(e, n) {
                             l()
                         }),
                         L.complete = function(n) {
+                            if(L._complete_non_official) {
+                                L._complete_non_official(B.state === 1, B.data)
+                            }
                             for (var i = 0,
                             t = e.length; i < t; ++i) e[i]();
                             L._completes = []
@@ -265,6 +268,9 @@ function(e, n) {
             },
             error: function(e) {
                 x < "6.0.2" || ( - 1 == B.state ? e(B.data) : L._fail = e)
+            },
+            complete: function(e) {
+                L._complete_non_official = e
             },
             checkJsApi: function(e) {
                 var n = function(e) {

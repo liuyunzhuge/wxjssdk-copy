@@ -16,3 +16,22 @@ import wx from 'wxjssdk-copy'
 ```
 
 目前此库同步的是官方[1.4.0的版本](https://res.wx.qq.com/open/js/jweixin-1.4.0.js)。
+
+
+## v1.4.1
+在阅读了官方1.4.0的源码之后，发现`wx.ready`和`wx.error`这两个api的设计有问题，一个方法做成了异步、同步混用的两种方式，很容易误导人。 所以在确保改动源码不会影响其它api使用的前提下，新增了一个`wx.complete`的api，使用示例如下：
+```js
+wx.complete(function(state, data) {
+    if(state === true) {
+        // config success
+        // data refers to config data, like appId etc.
+    } else {
+        // config error
+        // data refers to error info from Wechat client
+    }
+})
+```
+
+改动的源码对比如下：
+![pic](./assets/01.png)
+![pic](./assets/02.png)
