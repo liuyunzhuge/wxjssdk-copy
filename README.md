@@ -31,6 +31,7 @@ wx.complete(function(state, data) {
     }
 })
 ```
+这是一个纯异步的回调函数调用设置的方式，而且只需要全局设置一次，在每次调用`wx.config`之后，都会执行这个回调。
 
 改动的源码对比如下：
 ![pic](./assets/01.png)
